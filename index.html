@@ -4,385 +4,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C Choice</title>
+    <title>Tech Store | Developergtm</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
-    <nav class="header-sec">
-        <div class="logo">
-            <a href="#"><img src="/img/logo.png" alt="C Choice"></a>
-        </div>
-    
-        <!-- Hamburger icon -->
-        <div class="hamburger" onclick="toggleMenu()">
-            <i class="fa-solid fa-bars"></i>
-        </div>
-    
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="/collection item/index.html">Collection</a>
-            <a href="">Shop</a>
-            <a href="">About</a>
-            <a href="/contact page/index.html">Contact Us</a>
-        </div>
-    
-        <div class="action-icon">
-            <a href="#">My Account <i class="fa-solid fa-angle-down"></i></a>
-    
-            <div class="icon">
-                <a href=""> <i class="fa-solid fa-magnifying-glass"></i></a>
-                <a href=""><i class="fa-regular fa-heart"></i></a>
-            </div>
-        </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Tech Store</div>
+        <div class="menu-icon" id="menu-icon">&#9776;</div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <div class="close-icon" id="close-icon">&#10005;</div>
     </nav>
 
-    <section class="hero-sec">
-        <div class="text-sec">
-            <p>Denim Jeans</p>
-            <h1>30% OFF <br> Off Everything</h1>
-
-            <input type="button" value="SHOP NOW">
+    <section class="hero-section">
+        <!-- Left Side: Heading, Description, and Button -->
+        <div class="left-side">
+            <h1>Best Computer <span class="animated-text"></span></h1>
+            <p>Upgrade your setup with the best computer accessories. Experience unmatched performance and style.</p>
+            <button class="shop-now-btn">Shop Now</button>
         </div>
 
-        <div class="img-sec">
-            <img src="/img/pent.png" alt="">
-        </div>
-    </section>
-
-    <section class="delivery-sec">
-        <div class="text-one">
-            <i class="fa-solid fa-hand-holding-dollar"></i>
-            <p>Free Delivery <br> for all order over 999</p>
-        </div>
-        <div class="text-one">
-            <i class="fa-solid fa-money-bill-transfer"></i>
-            <p>7 Days Return <br> if goods have problems</p>
-        </div>
-        <div class="text-one">
-            <i class="fa-solid fa-credit-card"></i>
-            <p>Secure Payment <br> 100% secure payment</p>
-        </div>
-        <div class="text-one">
-            <i class="fa-solid fa-headphones"></i>
-            <p>24/7 Support <br> dedicated support</p>
+        <!-- Right Side: Animated PNG Image -->
+        <div class="right-side">
+            <img width="500px" src="/img/hero-img.png" alt="Keyboard">
         </div>
     </section>
 
-    <section class="product-sec">
-        <div class="pro-heading">
-            <h1>Denim Jeans</h1>
-            <p>View All</p>
+    <section class="product-section">
+        <!-- Heading -->
+        <h2 class="section-heading">Our Products</h2>
+
+        <!-- Category Filters -->
+        <div class="category-filters">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="computer">Computer</button>
+            <button class="filter-btn" data-category="keyboard">Keyboard</button>
+            <button class="filter-btn" data-category="mouse">Mouse</button>
+            <button class="filter-btn" data-category="monitor">Monitor</button>
         </div>
-        <div class="item">
 
-            <div class="item-one">
-                <img src="/img/item1.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+        <!-- Product Grid -->
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card" data-category="computer">
+                <img src="/img/computer.webp" alt="Computer 1">
+                <h3 class="product-name">Gaming Computer</h3>
+                <div class="product-rating">★★★★☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
 
-            <div class="item-one">
-                <img src="/img/item2.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+            <!-- Product 2 -->
+            <div class="product-card" data-category="keyboard">
+                <img src="/img/keyboard.webp" alt="Keyboard 1">
+                <h3 class="product-name">Mechanical Keyboard</h3>
+                <div class="product-rating">★★★★★</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
 
-            <div class="item-one">
-                <img src="/img/item3.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+            <!-- Product 3 -->
+            <div class="product-card" data-category="mouse">
+                <img src="/img/mouse.jpeg" alt="Mouse 1">
+                <h3 class="product-name">Wireless Mouse</h3>
+                <div class="product-rating">★★★☆☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
 
-            <div class="item-one">
-                <img src="/img/item4.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+            <!-- Product 4 -->
+            <div class="product-card" data-category="monitor">
+                <img src="/img/monitor.webp" alt="Monitor 1">
+                <h3 class="product-name">4K Monitor</h3>
+                <div class="product-rating">★★★★☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
 
-            <div class="item-one">
-                <img src="/img/item5.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+            <!-- Product 5 -->
+            <div class="product-card" data-category="monitor">
+                <img src="/img/mouse2.webp" alt="Monitor 1">
+                <h3 class="product-name">4K Monitor</h3>
+                <div class="product-rating">★★★★☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
 
-            <div class="item-one">
-                <img src="/img/item6.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+            <!-- Product 6 -->
+            <div class="product-card" data-category="monitor">
+                <img src="/img/headphone.webp" alt="Monitor 1">
+                <h3 class="product-name">4K Monitor</h3>
+                <div class="product-rating">★★★★☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
 
-            <div class="item-one">
-                <img src="/img/item7.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+            <!-- Product 4 -->
+            <div class="product-card" data-category="monitor">
+                <img src="/img/mouse3.webp" alt="Monitor 1">
+                <h3 class="product-name">4K Monitor</h3>
+                <div class="product-rating">★★★★☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
 
-            <div class="item-one">
-                <img src="/img/item8.jpg" alt="">
-                <div class="action-btn">
-                    <div class="item-disc">
-                        <p>Fabric Jeans</p>
-                        <p>₹599</p>
-                    </div>
-                    <div class="rating">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                    </div>
-                </div>
+            <!-- Product 4 -->
+            <div class="product-card" data-category="monitor">
+                <img src="/img/keyboard2.jpeg" alt="Monitor 1">
+                <h3 class="product-name">4K Monitor</h3>
+                <div class="product-rating">★★★★☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
             </div>
+
+            <!-- Product 6 -->
+            <div class="product-card" data-category="computer">
+                <img src="/img/hero-img.png" alt="Computer 1">
+                <h3 class="product-name">Gaming Computer</h3>
+                <div class="product-rating">★★★★☆</div>
+                <a href="#" class="buy-now-btn">Buy Now</a>
+            </div>
+            <!-- Add more products as needed -->
         </div>
     </section>
 
-    <section class="offer-sec">
-        <img src="/img/offerimg.png" alt="">
-        <img src="/img/offerimg2.png" alt="">
-    </section>
-
-    <section class="review">
-        <div class="review-section">
-            <h2 class="review-heading">Customer Reviews</h2>
-            <div class="review-slider-container">
-                <div class="review-slider">
-                    <div class="review-box">
-                        <img src="customer1.jpg" alt="Customer 1" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">John Doe</h3>
-                            <div class="star-rating">
-                                ★★★★☆
-                            </div>
-                            <p class="review-text">This product is amazing! I highly recommend it to everyone.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer2.jpg" alt="Customer 2" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Jane Smith</h3>
-                            <div class="star-rating">
-                                ★★★★★
-                            </div>
-                            <p class="review-text">Absolutely love it! It works exactly as described.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                    <div class="review-box">
-                        <img src="customer3.jpg" alt="Customer 3" class="review-photo">
-                        <div class="review-content">
-                            <h3 class="review-name">Mark Wilson</h3>
-                            <div class="star-rating">
-                                ★★★☆☆
-                            </div>
-                            <p class="review-text">Good product, but could be improved in certain areas.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Previous and Next Buttons -->
-                <button class="prev button" onclick="moveSlide(-1)">&#10094;</button>
-                <button class="next button" onclick="moveSlide(1)">&#10095;</button>
-            </div>
-        </div>
-    </section>
-
-      <!-- Footer Section -->
-      <footer class="footer">
+     <!-- Footer Section -->
+     <footer class="footer">
         <div class="footer-container">
-            <!-- Logo Section -->
-            <div class="footer-logo">
-                <img src="/img/logo.png" alt="Brand Logo" class="footer-logo-img">
+            <!-- Company Info -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Tech Store</h3>
+                <p class="footer-text">Your one-stop shop for the best computer accessories and gadgets.</p>
+                <div class="social-icons">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
 
-            <!-- Navigation Links Section -->
-            <div class="footer-links">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Shop</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Home</a></li>
+                    <li><a href="#" class="footer-link">About Us</a></li>
+                    <li><a href="#" class="footer-link">Services</a></li>
+                    <li><a href="#" class="footer-link">Contact</a></li>
                 </ul>
             </div>
 
-            <!-- Address and Payment Options Section -->
-            <div class="footer-info">
-                <h4>Contact Us</h4>
-                <p><strong>Address:</strong> 123 Fashion Street, New York, NY</p>
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Contact Us</h3>
+                <ul class="footer-contact">
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Tech Street, City, Country</li>
+                    <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                    <li><i class="fas fa-envelope"></i> info@techstore.com</li>
+                </ul>
+            </div>
 
-                <!-- Payment Methods -->
-                <div class="payment-methods">
-                    <h4>We Accept</h4>
-                    <div class="payment-img">
-                        <img src="/img/visa.png" alt="Visa" class="payment-icon">
-                    <img src="/img/mastercard.png" alt="Mastercard" class="payment-icon">
-                    <img src="/img/paypal.png" alt="Mastercard" class="payment-icon">
-                    </div>
-                </div>
+            <!-- Newsletter -->
+            <div class="footer-section">
+                <h3 class="footer-heading">Newsletter</h3>
+                <p class="footer-text">Subscribe to our newsletter for the latest updates.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
             </div>
         </div>
 
-        <!-- Copyright Section -->
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p>&copy; 2025 C Choice. All rights reserved.</p>
+            <p>&copy; 2025 Tech Store. All rights reserved.</p>
         </div>
     </footer>
-    
 
     <script src="main.js"></script>
 </body>
