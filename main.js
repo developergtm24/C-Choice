@@ -33,22 +33,6 @@ function changeWord() {
 
 setInterval(changeWord, 2000); // Change word every 2 seconds
 
-// Animated Image
-const images = ["keyboard.png", "mouse.png", "monitor.png", "headset.png"];
-let currentImageIndex = 0;
-const animatedImageElement = document.querySelector(".animated-image");
-
-function changeImage() {
-    animatedImageElement.style.opacity = 0;
-    setTimeout(() => {
-        animatedImageElement.src = images[currentImageIndex];
-        animatedImageElement.style.opacity = 1;
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-    }, 500); // Delay for fade effect
-}
-
-setInterval(changeImage, 3000); // Change image every 3 seconds
-
 // Category Filter Functionality
 const filterButtons = document.querySelectorAll(".filter-btn");
 const productCards = document.querySelectorAll(".product-card");

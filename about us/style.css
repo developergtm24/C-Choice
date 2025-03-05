@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
     color: #333;
-    line-height: 1.6;
 }
 
 
@@ -58,7 +53,7 @@ body {
     .nav-links {
         position: fixed;
         top: 0;
-        right: -100%;
+        right: -120%;
         height: 100%;
         width: 100%;
         background-color: #333;
@@ -96,113 +91,91 @@ body {
     }
 }
 
-.contact-section {
-    max-width: 800px;
-    margin: 50px auto;
-    padding: 20px;
-    background-color: #fff;
+.about-section {
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-content {
+    display: flex;
+    align-items: stretch; /* Ensure both sides have equal height */
+    gap: 40px;
+}
+
+.about-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-image img {
+    width: 100%;
+    height: 100%;
+    max-height: 400px; /* Set a max height for the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.section-heading {
+.about-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about-text h1 {
     font-size: 36px;
-    margin-bottom: 10px;
-    text-align: center;
-    color: #ff6347;
+    margin-bottom: 20px;
 }
 
-.section-description {
+.about-text p {
     font-size: 18px;
-    text-align: center;
-    margin-bottom: 30px;
-    color: #555;
+    margin-bottom: 20px;
 }
 
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.form-group label {
-    font-size: 18px;
-    color: #333;
-}
-
-.form-group input,
-.form-group textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-.submit-btn {
-    padding: 15px 30px;
-    font-size: 18px;
-    color: #fff;
-    background-color: #ff6347;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-    background-color: #ff4500;
-}
-
-.success-message {
-    display: none;
-    text-align: center;
+.social-icons {
     margin-top: 20px;
-    padding: 15px;
-    background-color: #d4edda;
-    color: #155724;
-    border-radius: 5px;
 }
 
-/* Responsive Design */
+.social-icons a {
+    color: #333;
+    font-size: 24px;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #0077b5; /* LinkedIn Blue */
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    .contact-section {
-        margin: 20px;
-        padding: 15px;
+    .about-content {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .section-heading {
+    .about-image img {
+        max-height: 300px; /* Adjust image height for mobile */
+    }
+
+    .about-text h1 {
         font-size: 28px;
     }
 
-    .section-description {
+    .about-text p {
         font-size: 16px;
     }
 
-    .form-group label {
-        font-size: 16px;
-    }
-
-    .form-group input,
-    .form-group textarea {
-        font-size: 14px;
-    }
-
-    .submit-btn {
-        font-size: 16px;
-        padding: 10px 20px;
+    .social-icons a {
+        font-size: 20px;
     }
 }
-
 
 
 .footer {
@@ -325,8 +298,9 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
     .footer-container {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+
+    
 
     .footer-heading {
         font-size: 18px;

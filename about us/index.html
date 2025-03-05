@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
-    <link rel="stylesheet" href="/contact page/style.css">
+    <title>About Us - Tech Store</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
 <body>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="logo">Tech Store</div>
@@ -22,45 +25,41 @@
         <div class="close-icon" id="close-icon">&#10005;</div>
     </nav>
 
+    <section class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <!-- Left Side: Image -->
+                <div class="about-image">
+                    <img src="/img/hero-img.png" alt="Tech Store Image">
+                </div>
 
-    <!-- Contact Section -->
-    <div class="contact-section">
-        <h2 class="section-heading">Contact Us</h2>
-        <p class="section-description">Have questions? Get in touch with us!</p>
+                <!-- Right Side: Text and Social Icons -->
+                <div class="about-text">
+                    <h1>About Us</h1>
+                    <p>Welcome to Tech Store, your number one source for all things tech. We're dedicated to providing
+                        you the very best of gadgets, accessories, and tech solutions, with an emphasis on quality,
+                        reliability, and innovation.</p>
+                    <p>Founded in 2023 by a team of tech enthusiasts, Tech Store has come a long way from its
+                        beginnings. When we first started out, our passion for technology drove us to start our own
+                        business.</p>
+                    <p>We hope you enjoy our products as much as we enjoy offering them to you. If you have any
+                        questions or comments, please don't hesitate to contact us.</p>
+                    <p>Sincerely,<br>The Tech Store Team</p>
 
-        <!-- Contact Form -->
-        <form id="contactForm" class="contact-form" action="send_email.php" method="POST">
-            <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://linkedin.com/in/yourprofile" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
             </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="subject">Subject</label>
-                <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
-            </div>
-
-            <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" placeholder="Enter your message" rows="5" required></textarea>
-            </div>
-
-            <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-
-        <!-- Success Message -->
-        <div id="successMessage" class="success-message">
-            <p>Your message has been sent successfully!</p>
         </div>
-    </div>
+    </section>
 
-     <!-- Footer Section -->
-     <footer class="footer">
+    <!-- Footer Section -->
+    <footer class="footer">
         <div class="footer-container">
             <!-- Company Info -->
             <div class="footer-section">
@@ -112,7 +111,8 @@
         </div>
     </footer>
 
-    <script src="/contact page/app.js"></script>
+
+    <script src="main.js"></script>
 </body>
 
 </html>
